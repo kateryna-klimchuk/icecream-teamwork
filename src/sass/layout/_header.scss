@@ -1,0 +1,374 @@
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+
+.header-conteiner {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6px 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: $mobile;
+
+  @media screen and (min-width: $tablet) {
+    padding: 37px 34px;
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 37px 115px 34px 46px;
+    max-width: $desktop;
+  }
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__icon {
+  width: 50px;
+}
+
+.header__company-name {
+  margin-left: 20px;
+  font-family: $secondaryFont;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+  color: $secondaryColor;
+  text-transform: uppercase;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 30px;
+  }
+}
+
+.header-btn {
+  padding: 10px 37px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 30px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 0;
+  }
+}
+
+.header-btn__icon {
+  margin-left: 12px;
+}
+
+.header-btn-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__list--desktop {
+  display: none;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header-nav__item {
+  margin-right: 35px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.header-nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.31;
+  color: $mainColor;
+  transition: color 250ms $cubic;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  &:hover,
+  &:focus {
+    color: $secondaryColor;
+  }
+}
+
+// Mobile  menu
+
+.mobile-backdrop {
+  background-color: transparent;
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 80vw;
+  height: 100vh;
+  padding: 20px;
+  background-color: #e17992;
+  font-weight: 700px;
+  font-size: 14px;
+  line-height: 1.29;
+  overflow: auto;
+
+  @media screen and (min-width: $mobile) {
+    width: 40vw;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+
+  z-index: 11;
+
+  transform: translateX(100%);
+  transition: transform 300ms $cubic;
+}
+
+.menu-container.is-open {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.js-close-menu {
+  display: flex;
+  margin-bottom: 32px;
+  margin-left: auto;
+}
+
+.mobile-menu-btn {
+  margin: 0 auto;
+  margin-bottom: 32px;
+  max-width: 209px;
+}
+
+.arrow--mobile {
+  margin-left: 14px;
+}
+
+.mob-menu__item {
+  border-top: 1px solid #e18298;
+  padding-top: 13px;
+  padding-bottom: 13px;
+
+  &:last-child {
+    border-bottom: 1px solid #e18298;
+  }
+}
+
+.mob-menu__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  color: $mainColor;
+  text-decoration: none;
+  transition: color 250ms $cubic;
+
+  &:hover,
+  &:focus {
+    color: $secondaryColor;
+  }
+}
+
+// Modal window
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(192, 98, 129, 0.6);
+
+  opacity: 1;
+  transition: opacity 500ms $cubic, visibility 500ms $cubic;
+  z-index: 99;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transition: transform 850ms $cubic;
+  transform: translate(-500px, -500px) scaleY(0.5);
+}
+
+.modal {
+  position: absolute;
+  min-width: 300px;
+  height: 80vh;
+  border-radius: 12px;
+  top: 50%;
+  left: 50%;
+  padding: 20px 40px;
+  transform: translate(-50%, -50%) scaleY(1);
+
+  background-image: linear-gradient(to bottom, #e17992, #dfcacf);
+
+  box-shadow: 7px 8px 13px 12px rgba(217, 174, 197, 0.34);
+  -webkit-box-shadow: 7px 8px 13px 12px rgba(217, 174, 197, 0.34);
+  -moz-box-shadow: 7px 8px 13px 12px rgba(217, 174, 197, 0.34);
+
+  @media screen and (min-width: $tablet) {
+    min-width: 400px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    min-width: 500px;
+  }
+}
+
+.modal__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  margin-top: 8px;
+  margin-right: 8px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+}
+
+.modal__icon {
+  fill: rgb(233, 208, 208);
+  transition: fill $durationTime $cubic;
+  &:hover,
+  &:focus {
+    fill: $secondaryColor;
+  }
+}
+
+// Modal form
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-head {
+  display: flex;
+  align-items: center;
+}
+
+.modal-logo {
+  width: 40px;
+  margin-right: 20px;
+}
+
+.modal-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.15;
+  color: $mainColor;
+}
+
+.modal-list__label {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: $mainColor;
+  margin-bottom: 4px;
+}
+
+.modal-list__input {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 36px;
+  transition: border 250ms $cubic;
+  padding: 10px;
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(190, 94, 110);
+  }
+}
+.modal-list__textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  padding: 10px;
+  resize: none;
+  border-radius: 4px;
+  transition: border 250ms $cubic;
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgb(190, 94, 110);
+  }
+}
+
+.modal-list [placeholder] {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.modal-list__input,
+.modal-list__textarea {
+  color: black;
+}
+
+.modal-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.modal-chekbox {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: #ad435c;
+  font-size: 14px;
+}
+.modal-chekbox input {
+  margin-right: 15px;
+}
+
+.modal-close {
+  margin: 0 auto;
+  min-width: 160px;
+  &:hover,
+  &:focus {
+    background-color: #eb8ea4;
+  }
+}

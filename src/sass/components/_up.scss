@@ -1,0 +1,38 @@
+#upbutton {
+    background: #f88ca5;
+    height: 60px;
+    width: 60px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    z-index: 999;
+    border: none;
+    border-radius: 50%;
+    transition: 250ms $cubic;
+    &:hover {
+        background: #d41443;
+    }
+    &:active {
+        background: #d41443;
+    }
+}
+
+
+
+.arrow_up::after {
+    scroll-behavior: smooth;
+    position: relative;
+    top: 26px;
+    left: 23px;
+    content: '';
+    display: block;
+    color: #fff;
+    width: 16px;
+    height: 16px;
+    border-top: 4px solid; 
+    border-right: 4px solid;
+    transform: rotate(-45deg);
+
+}

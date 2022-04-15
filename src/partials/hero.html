@@ -1,0 +1,86 @@
+<section class="hero">
+  <div class="container hero-container">
+    <div class="hero__content">
+      <h1 class="hero-title">
+        <span class="title">ice cream</span>
+        <span class="title">made with</span>
+        <span class="title--red">passion</span>
+      </h1>
+    </div>
+    <ul class="hero__list-btn list">
+      <li class="hero__item">
+        <a class="link button--red hero__btn" href="#products"> Products </a>
+      </li>
+      <li class="hero__item">
+        <a class="link button--white hero__btn" href="#about-us"> How it’s made? </a>
+      </li>
+    </ul>
+    <div class="hero__circle animate__animated animate__rotateInDownLeft"></div>
+    <div class="hero__ice-pict">
+      <picture>
+        <source
+          srcset="/images/hero/ice-pc-1x.png 1x, /images/hero/ice-pc-2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/images/hero/ice-tab-1x.png 1x, /images/hero/ice-tab-2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="/images/hero/ice-mob-1x.png 1x, /images/hero/ice-mob-2x.png 2x"
+          media="(min-width: 320px)"
+        />
+        <img src="/images/hero/ice-pc-2x.png" alt="icecream" />
+      </picture>
+    </div>
+    <div class="hero__milk-container">
+      <div class="hero__milk-pict animate__animated animate__fadeInLeft">
+        <picture>
+          <source
+            srcset="/images/hero/milk-pc-1x.png 1x, /images/hero/milk-pc-2x.png 2x"
+            media="(min-width: 1280px)"
+          />
+          <source
+            srcset="/images/hero/milk-tab-1x.png 1x, /images/hero/milk-tab-2x.png 2x"
+            media="(min-width: 768px)"
+          />
+          <img src="/images/hero/milk-pc-2x.png" alt="icecream" />
+        </picture>
+      </div>
+      <div>
+        <p class="hero__milk-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et
+        </p>
+        <button type="button" class="button-fix">
+          <svg class="right_arrow right_arrow--little">
+            <use href="./images/sprite.svg#icon-arrow"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="hero__girl-pict animate__animated animate__fadeInRight">
+      <picture>
+        <source
+          srcset="/images/hero/girl-pc-1x.png 1x, /images/hero/girl-pc-2x.png 2x"
+          media="(min-width: 1280px)"
+        />
+        <source
+          srcset="/images/hero/girl-tab-1x.png 1x, /images/hero/girl-tab-2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <img src="/images/hero/girl-pc-2x.png" alt="icecream" />
+      </picture>
+    </div>
+    <ul class="list hero__inf animate__animated animate__fadeInRight">
+      <li>
+        <p class="hero__inf-number">16</p>
+        <p class="hero__inf-text">cafes</p>
+      </li>
+      <li>
+        <p class="hero__inf-number">23</p>
+        <p class="hero__inf-text">food trucks</p>
+      </li>
+    </ul>
+  </div>
+</section>

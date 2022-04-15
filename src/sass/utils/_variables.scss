@@ -1,0 +1,45 @@
+// Основные цвета на макете:
+
+// цвет фона, текста - #D41443, #FFFFFF, #000000
+
+// доп. цвет фона, текста #FFA5BA, #FFF5F6, #907E82, #c7133E;, rgba(212, 20, 67, 0.1) accentColor: ECEBEB
+
+// Основные цвета фона и текста:
+$mainColor: #ffffff;
+$secondaryColor: #d41443;
+$textColor: #000000;
+
+$contrastBgColor: #fff5f6;
+
+// hover
+$accentColor: #ecebeb;
+$accentColorSecond: #c7133e;
+
+// Доп. цвета фона и текста:
+$herobg: #ffb8ca;
+$pinkColor: #ffa5ba;
+$greyColor: #907e82;
+$shadowColor: rgba(212, 20, 67, 0.1);
+
+// доп. шрифт
+$secondaryFont: 'Titan One', cursive;
+
+// анимация
+$cubic: cubic-bezier(0.4, 0, 0.2, 1);
+$durationTime: 250ms;
+
+// breakpoints
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1280px;
+
+$fontSizeCardM: calc(12px + (16 - 12) * (100vw / 1280));
+$fontSizeCardT: 14px;
+$fontSizeCard: 16px;
+
+$fontSizeLbTitle: 30px;
+$lineHeightSectionTitle: 1.14;
+$fontSizeSectionTitle: 34px;
+$fontSizeSectionTitleMob: calc(34px + (58 - 30) * (100vw / 1280));
+$letterSpSectionTitle: 0.04em;
+$letterSpacingBig: 0.06em;

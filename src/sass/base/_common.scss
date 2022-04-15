@@ -1,0 +1,50 @@
+// основной шрифт
+// Font: DM Sans Weight 400, 500, 700
+
+// доп шрифт:
+// font-family: 'Titan One', cursive;
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* reset */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.link {
+  text-decoration: none;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}

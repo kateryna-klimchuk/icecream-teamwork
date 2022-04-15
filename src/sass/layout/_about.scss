@@ -1,0 +1,190 @@
+.about {
+  padding-top: 125px;
+  background-color: $contrastBgColor;
+
+  background-image: url(../images/about/milk-mob.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom 60px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/about/milk-mob2x.png);
+  }
+
+  @media screen and(min-width:$tablet) {
+    background-image: none;
+    padding-top: 130px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    background-image: url(../images/about/milk-desktop.png);
+    background-position: center bottom;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/about/milk-desktop2x.png);
+    }
+  }
+
+  @media screen and(min-width:1970px) {
+    background-size: 100% 100%;
+  }
+
+  // @media screen and(max-width:767px) {
+  //   background-image: url(../images/about/milk-mob.png);
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: 50% 93%;
+
+  //   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  //     background-image: url(../images/about/milk-mob2x.png);
+  //   }
+  // }
+
+  // @media screen and(min-width:$desktop) {
+  //   background-image: url(../images/about/milk-desktop.png);
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
+  //   background-position: 50% 125%;
+
+  //   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  //     background-image: url(../images/about/milk-desktop2x.png);
+  //   }
+  // }
+}
+
+.about-pre__title {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about__title {
+  margin-bottom: 26px;
+  text-align: center;
+
+  @media screen and(min-width:$tablet) {
+    margin-bottom: 50px;
+  }
+
+  @media screen and(min-width:$desktop) {
+    margin-bottom: 55px;
+  }
+}
+
+.about-container {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.about-content {
+  position: relative;
+  @media screen and (min-width: $tablet) {
+    width: 50%;
+
+    padding-top: 50px;
+    &:first-of-type {
+      margin-left: 17px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 46px 30px 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 40%;
+    padding-top: 56px;
+
+    &:first-of-type {
+      margin-left: 74px;
+    }
+  }
+}
+
+.about-content__text {
+  @include font('DM Sans', 500, 12px, 1.62);
+  color: $greyColor;
+  margin-bottom: 20px;
+
+  &:first-child {
+    color: #000000;
+  }
+
+  @media screen and(min-width:$tablet) {
+    @include font('DM Sans', 500, 14px, 1.76);
+  }
+
+  @media screen and(min-width:$desktop) {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+
+    &:nth-last-child(-n + 3) {
+      font-size: 16px;
+      line-height: 1.94;
+    }
+  }
+}
+
+// .overlay-text {
+//   @extend .overlay-text;
+
+//   .about-button:active & {
+//     opacity: 1;
+//   }
+
+//   .about-button:focus & {
+//     opacity: 1;
+//   }
+// }
+
+// читать больше
+.read-more {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.extra-text {
+  display: none;
+}
+
+#read-more:checked ~ .extra-text {
+  display: block;
+}
+
+.more {
+  margin-left: 5px;
+}
+
+.less {
+  display: none;
+  margin-left: 5px;
+}
+
+#read-more:checked ~ .read-more .more {
+  display: none;
+}
+
+#read-more:checked ~ .read-more .less {
+  display: inline;
+}
+
+// // на верх
+// .about-up {
+//   display: block;
+//   position: fixed;
+//   bottom: 50px;
+//   right: 40px;
+//   z-index: 10;
+
+//   transform: rotate(270deg);
+
+//   width: 30px;
+//   height: 30px;
+
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   border-radius: 50%;
+// }

@@ -1,0 +1,7 @@
+@mixin font($ff: 'DM Sans', $fw, $fz, $ln) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fz;
+  line-height: $ln;
+}
+

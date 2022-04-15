@@ -1,0 +1,207 @@
+.contacts {
+  padding-top: 140px;
+  padding-bottom: 60px;
+  background-image: linear-gradient(to bottom, $mainColor 10%, $contrastBgColor 10%);
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    linear-gradient: (to bottom, $mainColor 15%, $contrastBgColor 15%);
+    padding-top: 140px;
+    padding-bottom: 95px;
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(to bottom, $mainColor 20%, $contrastBgColor 20%);
+    padding-top: 140px;
+    padding-bottom: 95px;
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('/images/contacts/sectionbg1.png'),
+      linear-gradient(to bottom, $mainColor 3%, $contrastBgColor 3%);
+    background-position: 50% 290px;
+    background-size: contain;
+    padding-bottom: 100px;
+    padding-top: 180px;
+    background-repeat: no-repeat;
+  }
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url('/images/contacts/sectionbg1.png'),
+      linear-gradient(to bottom, $mainColor 3%, $contrastBgColor 3%);
+    background-position: 50% 290px;
+    background-size: contain;
+    padding-bottom: 100px;
+    padding-top: 185px;
+    background-repeat: no-repeat;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  justify-content: center;
+  margin: -20px;
+  margin-bottom: 80px;
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    margin: -10px;
+    margin-bottom: 55px;
+    font-size: $fontSizeCardM;
+  }
+  @media screen and (min-width: $tablet) {
+    font-size: $fontSizeCardT;
+  }
+
+  @media screen and (min-width: $desktop) {
+    justify-content: center;
+    margin: -15px;
+    margin-bottom: 75px;
+    font-size: $fontSizeCard;
+  }
+}
+.card {
+  margin: 10px;
+  width: calc(100vw - 0.3 * 100vw);
+  background: $mainColor;
+  box-shadow: 0px 8px 30px $shadowColor;
+  border-radius: 24px;
+  padding: 43px 20px;
+
+  @media screen and (min-width: $mobile) {
+    padding: 60px 43px;
+    width: 330px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 220px;
+    margin: 10px;
+    padding: 50px 31px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 330px;
+    padding: 51px 43px;
+    margin: 15px;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    width: 330px;
+    padding: 51px 43px;
+    margin: 15px;
+  }
+}
+
+.card__title {
+  padding-right: 15px;
+  padding-left: 15px;
+  display: inline-block;
+  background: #f0d1a5;
+  border-radius: 6px;
+  margin-bottom: 32px;
+  font-size: $fontSizeCard;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: $mainColor;
+}
+.card__title--green {
+  background: #c2e297;
+}
+.card__subtitle {
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+  color: $textColor;
+}
+.card__text {
+  line-height: 1.5;
+  @media screen and (min-width: $tablet) {
+    line-height: 1.66;
+  }
+  @media screen and (min-width: $desktop) {
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+  }
+  margin-top: 10px;
+
+  margin-bottom: 32px;
+
+  color: $greyColor;
+}
+.card__subtitle--pink {
+  color: $pinkColor;
+  letter-spacing: normal;
+}
+.card__list {
+  width: 100%;
+
+  border-bottom: 1px solid #e1e1e1;
+  border-top: 1px solid #e1e1e1;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  margin-bottom: 25px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    padding-bottom: 31px;
+    padding-top: 31px;
+    margin-bottom: 31px;
+  }
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 31px;
+    padding-top: 31px;
+    margin-bottom: 31px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 27px;
+    padding-top: 29px;
+    margin-bottom: 29px;
+  }
+}
+.card__point:first-child {
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 14px;
+  }
+}
+
+.contacts-data {
+  line-height: 1.5;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.83;
+  }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    line-height: 1.83;
+  }
+}
+
+.contacts-data__link {
+  display: block;
+  color: $greyColor;
+}
+.contacts-bnt {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.contacts-bnt__item {
+  display: flex;
+  justify-content: center;
+}
+.button--paddings {
+  @media screen and (max-width: 767px) {
+    padding: 10px 17px;
+  }
+}
+.contacts-bnt__first {
+  margin-right: 15px;
+  @media screen and (max-width: 767px) {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+}
